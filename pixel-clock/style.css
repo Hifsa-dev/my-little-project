@@ -1,0 +1,116 @@
+html {
+    font-size: 12px;
+  }
+  @media (max-width: 767px) {
+    html {
+      font-size: 2.4vw;
+    }
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background: #0d2744;
+  }
+  
+  .clock {
+    position: relative;
+    display: flex;
+    transform: skewX(-16deg);
+  }
+  .row {
+    position: absolute;
+    left: 0.5rem;
+    display: flex;
+    width: 60rem;
+  }
+  .row--top {
+    top: -1.2rem;
+  }
+  .row--bottom {
+    bottom: -1.2rem;
+  }
+  .row .number__tile {
+    background: #12486b;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1.2rem;
+    height: 6rem;
+  }
+  .column .number__tile {
+    margin: 0.1rem;
+    background: #12486b;
+  }
+  .column .number__tile--white {
+    background: linear-gradient(#f5fccd, #eb80b1);
+  }
+  .column .number__tile:not(.column .number__tile--white) {
+    transform: translateX(0.5rem);
+  }
+  
+  .number {
+    display: flex;
+    flex-wrap: wrap;
+    width: 2.4rem;
+    height: 6rem;
+  }
+  .number__tile {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    margin: 0.1rem;
+    background: linear-gradient(#f5fccd, #eb80b1);
+    border-radius: 10%;
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50% 1rem;
+  }
+  .number__tile:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    background: #235475;
+    border-radius: 10%;
+    transform: rotate3d(0, 1, 0, 90deg);
+    transform-origin: 100% 50%;
+  }
+  .number--1 .number__tile--00, .number--1 .number__tile--20, .number--1 .number__tile--30, .number--1 .number__tile--02, .number--1 .number__tile--12, .number--1 .number__tile--22, .number--1 .number__tile--32 {
+    transform: rotate3d(0, -1, 0, 90deg);
+  }
+  .number--2 .number__tile--10, .number--2 .number__tile--20, .number--2 .number__tile--31 {
+    transform: rotate3d(0, -1, 0, 90deg);
+  }
+  .number--3 .number__tile--10, .number--3 .number__tile--30 {
+    transform: rotate3d(0, -1, 0, 90deg);
+  }
+  .number--4 .number__tile--00, .number--4 .number__tile--11, .number--4 .number__tile--30, .number--4 .number__tile--40 {
+    transform: rotate3d(0, -1, 0, 90deg);
+  }
+  .number--5 .number__tile--11, .number--5 .number__tile--30, .number--5 .number__tile--42 {
+    transform: rotate3d(0, -1, 0, 90deg);
+  }
+  .number--6 .number__tile--00, .number--6 .number__tile--11 {
+    transform: rotate3d(0, -1, 0, 90deg);
+  }
+  .number--7 .number__tile--10, .number--7 .number__tile--20, .number--7 .number__tile--31, .number--7 .number__tile--41 {
+    transform: rotate3d(0, -1, 0, 90deg);
+  }
+  .number--8 .number__tile--20, .number--8 .number__tile--21 {
+    transform: rotate3d(0, -1, 0, 90deg);
+  }
+  .number--9 .number__tile--30, .number--9 .number__tile--41 {
+    transform: rotate3d(0, -1, 0, 90deg);
+  }                                         
+              
